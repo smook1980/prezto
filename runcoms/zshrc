@@ -11,4 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export TERM=xterm-256color
+source ~/.alias
 
+export EDITOR='/usr/bin/env emacsclient -c -a "" -n'
+export VISUAL='/usr/bin/env emacsclient -t -a ""'
+
+source ~/.secrets
