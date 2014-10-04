@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='/usr/bin/env emacsclient -c -a "" -n'
+export VISUAL='/usr/bin/env emacsclient -t -a "" -n'
 export PAGER='less'
 
 #
@@ -37,12 +37,14 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 # Set the the list of directories that cd searches.
-# cdpath=(
-#   $cdpath
-# )
+cdpath=(
+   $HOME/Projects/{ncsa,personal}
+   $cdpath
+)
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  $HOME/bin
   /usr/local/{bin,sbin}
   $path
 )
